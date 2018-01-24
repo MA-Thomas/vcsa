@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System xmlns:tns="http://www.example.org/DessaXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" reloaded="no" type="test" xmlversion="1.4" xsi:schemaLocation="http://www.example.org/DessaXML DessaXML.xsd">
+   <Solution pH="7" temp="50" volume="200"/>
+   <Assemblies>
+      <Assembly amount="400" name="assem">
+         <Subunit name="0" type="only">
+            <Pos x="0" y="0" z="0"/>
+            <Domain curconf="bs" id="0"/>
+         </Subunit>
+      </Assembly>
+   </Assemblies>
+   <BindingSiteTypes>
+      <BindingSiteType name="bsta">
+         <Tolerance bending="0.2" rotation="0.2" translation="0.2"/>
+         <Partner angle="0" bindTime="1e2" breakTime="1e-2" fastBindTime="1e-11" name="bstb"/>
+         <Partner angle="0" bindTime="1e2" breakTime="1e-2" fastBindTime="1e-11" name="bstc"/>
+         <Pos x="0.577350269189626" y="0" z="-0.816496580927726"/>
+      </BindingSiteType>
+      <BindingSiteType name="bstb">
+         <Tolerance bending="0.2" rotation="0.2" translation="0.2"/>
+         <Partner angle="0" bindTime="1e2" breakTime="1e-2" fastBindTime="1e-11" name="bsta"/>
+         <Partner angle="0" bindTime="1e2" breakTime="1e-2" fastBindTime="1e-11" name="bstc"/>
+         <Pos x="-0.288675134594813" y="0.5" z="-0.816496580927726"/>
+      </BindingSiteType>
+      <BindingSiteType name="bstc">
+         <Tolerance bending="0.2" rotation="0.2" translation="0.2"/>
+         <Partner angle="0" bindTime="1e2" breakTime="1e-2" fastBindTime="1e-11" name="bsta"/>
+         <Partner angle="0" bindTime="1e2" breakTime="1e-2" fastBindTime="1e-11" name="bstb"/>
+         <Pos x="-0.288675134594813" y="-0.5" z="-0.816496580927726"/>
+      </BindingSiteType>
+   </BindingSiteTypes>
+   <ConformationalSwitch>
+      <ConformationTime name="bs">
+         <List name="bs" time="1e10"/>
+      </ConformationTime>  
+   </ConformationalSwitch>
+   <SubunitTypes>
+      <SubunitType name="only">
+         <Up x="0" y="0" z="1"/>
+         <Domain currentconf="bs" name="0">
+            <Pos x="0" y="0" z="0"/>
+            <Conformation energy="6.6" name="bs">
+               <BindingSite type="bsta"/>
+               <BindingSite type="bstb"/>
+               <BindingSite type="bstc"/>
+            </Conformation>
+         </Domain>
+      </SubunitType>
+   </SubunitTypes>
+</System>

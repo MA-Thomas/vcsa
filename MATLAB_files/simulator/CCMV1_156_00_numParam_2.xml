@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System xmlns:tns="http://www.example.org/DessaXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" reloaded="no" type="test" xmlversion="1.4" xsi:schemaLocation="http://www.example.org/DessaXML DessaXML.xsd">
+   <Solution pH="7" temp="50" volume="200"/>
+   <Assemblies>
+      <Assembly amount="60" name="assem">
+         <Subunit name="0" type="only0">
+            <Pos x="0" y="0" z="0"/>
+            <Domain curconf="bs0" id="0"/>
+         </Subunit>
+      </Assembly>
+      <Assembly amount="30" name="assem">
+         <Subunit name="1" type="only1">
+            <Pos x="0" y="0" z="0"/>
+            <Domain curconf="bs1" id="1"/>
+         </Subunit>
+      </Assembly>
+   </Assemblies>
+   <BindingSiteTypes>
+      <BindingSiteType name="bst0a">
+         <Tolerance bending="0.2" rotation="0.2" translation="0.2"/>
+         <Partner angle="0" bindTime="5.1248727235831" breakTime="3.17226e-05" fastBindTime="1e-11" name="bst1b"/>
+         <Partner angle="0" bindTime="5.1248727235831" breakTime="3.17226e-05" fastBindTime="1e-11" name="bst1d"/>
+         <Pos x="0" y="0.288675134594813" z="0"/>
+      </BindingSiteType>
+      <BindingSiteType name="bst0b">
+         <Tolerance bending="0.2" rotation="0.2" translation="0.2"/>
+         <Partner angle="0" bindTime="5.1248727235831" breakTime="3.17226e-05" fastBindTime="1e-11" name="bst1a"/>
+         <Partner angle="0" bindTime="5.1248727235831" breakTime="3.17226e-05" fastBindTime="1e-11" name="bst1c"/>
+         <Pos x="-0.25" y="-0.144337567297406" z="0"/>
+      </BindingSiteType>
+      <BindingSiteType name="bst0c">
+         <Tolerance bending="0.2" rotation="0.2" translation="0.2"/>
+         <Partner angle="0" bindTime="5.1248727235831" breakTime="3.17226e-05" fastBindTime="1e-11" name="bst0d"/>
+         <Pos x="0" y="-0.251920437850356" z="-0.096225045060632"/>
+      </BindingSiteType>
+      <BindingSiteType name="bst0d">
+         <Tolerance bending="0.2" rotation="0.2" translation="0.2"/>
+         <Partner angle="0" bindTime="5.1248727235831" breakTime="3.17226e-05" fastBindTime="1e-11" name="bst0c"/>
+         <Pos x="0.218169499062491" y="0.125960219012695" z="-0.096230830697095"/>
+      </BindingSiteType>
+      <BindingSiteType name="bst1a">
+         <Tolerance bending="0.2" rotation="0.2" translation="0.2"/>
+         <Partner angle="0" bindTime="5.1248727235831" breakTime="3.17226e-05" fastBindTime="1e-11" name="bst0b"/>
+         <Pos x="0.25" y="0.144337567297406" z="0"/>
+      </BindingSiteType>
+      <BindingSiteType name="bst1b">
+         <Tolerance bending="0.2" rotation="0.2" translation="0.2"/>
+         <Partner angle="0" bindTime="5.1248727235831" breakTime="3.17226e-05" fastBindTime="1e-11" name="bst0a"/>
+         <Pos x="-0.25" y="0.144337567297406" z="0"/>
+      </BindingSiteType>
+      <BindingSiteType name="bst1c">
+         <Tolerance bending="0.2" rotation="0.2" translation="0.2"/>
+         <Partner angle="0" bindTime="5.1248727235831" breakTime="3.17226e-05" fastBindTime="1e-11" name="bst0b"/>
+         <Pos x="-0.25" y="-0.10758287055295" z="-0.096225045060632"/>
+      </BindingSiteType>
+      <BindingSiteType name="bst1d">
+         <Tolerance bending="0.2" rotation="0.2" translation="0.2"/>
+         <Partner angle="0" bindTime="5.1248727235831" breakTime="3.17226e-05" fastBindTime="1e-11" name="bst0a"/>
+         <Pos x="0.25" y="-0.10758287055295" z="-0.096225045060632"/>
+      </BindingSiteType>
+   </BindingSiteTypes>
+   <ConformationalSwitch>
+      <ConformationTime name="bs0">
+         <List name="bs0" time="100"/>
+         <List name="bs1" time="100"/>
+      </ConformationTime>
+      <ConformationTime name="bs1">
+         <List name="bs1" time="100"/>
+         <List name="bs0" time="100"/>
+      </ConformationTime>
+   </ConformationalSwitch>
+   <SubunitTypes>
+      <SubunitType name="only0">
+         <Up x="0.309016995110751" y="-0.178411045311361" z="0.934172358638185"/>
+         <Domain currentconf="bs0" name="0">
+            <Pos x="0" y="0" z="0"/>
+            <Conformation energy="6.6" name="bs0">
+               <BindingSite type="bst0a"/>
+               <BindingSite type="bst0b"/>
+               <BindingSite type="bst0c"/>
+               <BindingSite type="bst0d"/>
+            </Conformation>
+         </Domain>
+      </SubunitType>
+      <SubunitType name="only1">
+         <Up x="0" y="-0.356822090622723" z="0.934172358638185"/>
+         <Domain currentconf="bs1" name="1">
+            <Pos x="0" y="0" z="0"/>
+            <Conformation energy="6.6" name="bs1">
+               <BindingSite type="bst1a"/>
+               <BindingSite type="bst1b"/>
+               <BindingSite type="bst1c"/>
+               <BindingSite type="bst1d"/>
+            </Conformation>
+         </Domain>
+      </SubunitType>
+      <SubunitType name="both">
+         <Up x="0" y="0" z="0"/>
+         <Domain currentconf="bs1" name="2">
+            <Pos x="0" y="0" z="0"/>
+            <Conformation energy="6.6" name="bs0">
+               <BindingSite type="bst0a"/>
+               <BindingSite type="bst0b"/>
+               <BindingSite type="bst0c"/>
+               <BindingSite type="bst0d"/>
+            </Conformation>
+            <Conformation energy="6.6" name="bs1">
+               <BindingSite type="bst1a"/>
+               <BindingSite type="bst1b"/>
+               <BindingSite type="bst1c"/>
+               <BindingSite type="bst1d"/>
+            </Conformation>
+         </Domain>
+      </SubunitType>
+   </SubunitTypes>
+</System>

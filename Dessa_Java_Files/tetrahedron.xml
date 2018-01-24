@@ -1,0 +1,102 @@
+<System type="tetrahedron">
+	<Solution Temp ="300" pH ="7" Volume ="100"/>
+	
+	<Assembly name ="assem " k=" " amount="100" type="monomer">
+		<Subunits> 
+			<Subunit name="0" domain="0" type="only">
+				<Position x="0.0" y="0.0" z="0.0"/>
+				<Rotation x="0.0" y="0.0" z="0.0" w="1.0"/>
+				<Velocity x="0.0" y="0.0" z="0.0"/>
+				<Rotational_Velocity x="0.0" y="0.0" z="0.0" w="1.0"/>
+			</Subunit>
+		</Subunits>
+	</Assembly>
+	
+	<Assembly name ="assem " k=" " amount="100" type="trimer">
+		<Subunits> 
+			<Subunit name="0" domain="0" type="only">
+				<Position x="0.0" y="0.0" z="0.0"/>
+				<Rotation x="0.0" y="0.0" z="0.0" w="1.0"/>
+				<Velocity x="0.0" y="0.0" z="0.0"/>
+				<Rotational_Velocity x="0.0" y="0.0" z="0.0" w="1.0"/>
+				<bindTo subunit="1" bindingSite="bsc" bindTo="bsc"/>
+				<bindto subunit="2" bindingSite="bsb" bindTo="bsb"/>
+			</Subunit>
+			<Subunit name="1" domain="0" type="only">
+				<Position x="0.0" y="0.0" z="0.0"/>
+				<Rotation x="0.0" y="0.0" z="0.0" w="1.0"/>
+				<Velocity x="0.0" y="0.0" z="0.0"/>
+				<Rotational_Velocity x="0.0" y="0.0" z="0.0" w="1.0"/>
+				<bindTo subunit="0" bindingSite="bsc" bindTo="bsc"/>
+			</Subunit>
+			<Subunit name="2" domain="0" type="only">
+				<Position x="0.0" y="0.0" z="0.0"/>
+				<Rotation x="0.0" y="0.0" z="0.0" w="1.0"/>
+				<Velocity x="0.0" y="0.0" z="0.0"/>
+				<Rotational_Velocity x="0.0" y="0.0" z="0.0" w="1.0"/>
+				<bindTo subunit="0" bindingSite="bsb" bindTo="bsb"/>
+			</Subunit>
+		</Subunits>		
+	</Assembly>
+
+	<BindingSiteTypes> 
+		<BindingSiteType name="bsta">
+			<tolerance transition="0.2" torsion="0.1" bending="0.1"/>
+			<partner name="bsta" angle="2.6721173923948456"/>
+		</BindingSiteType>
+		
+		<BindingSiteType name ="bstb">
+			<tolerance transition="0.2" torsion="0.1" bending="0.1"/>
+			<partner name ="bstb" angle="-0.42591627350063505"/>
+		</BindingSiteType>
+
+		<BindingSiteType name ="bstc">
+			<tolerance transition="0.2" torsion="0.1" bending="0.1"/>
+			<partner name ="bstc" angle="2.739364542972453"/>
+		</BindingSiteType>
+		
+	</BindingSiteTypes>
+	
+
+	<BindingInteract>
+		<BindBreak name="bsta">
+			<Time name="bsta" bindTime="1.0" breakTime="1000.0" fastbindTime="0.00001"/>
+		</BindBreak>
+		<BindBreak name="bstb">
+			<Time name="bstb" bindTime="1.0" breakTime="10000.0" fastbindTime="0.0001"/>
+		</BindBreak>
+		<BindBreak name="bstc">
+			<Time name="bstc" bindTime="1.0" breakTime="10000.0" fastbindTime="0.0001"/>
+		</BindBreak>
+	
+		<ConformationTime name="bs">
+			<List name="none" time="11.0"/>
+		</ConformationTime>
+		<ConformationTime name="none">
+			<List name="bs" time="12.0"/>
+		</ConformationTime>
+	</BindingInteract>
+		
+	<SubunitType name="only" id="0">
+	        <Up x="1.0" y="1.0" z="1.0"/>
+		<Domain position="" id= "0">
+			<Conformation name="subt1only" Evalue="6.6">				
+				<BindingSite name="bsa" type="bsta">
+					<Bpos x="0.0" y="0.057735026918962574" z="0.08164965809277261"/>
+					<Orientation x="0.45970084338098305" y="0.0" z="0.0" w="0.8880738339771153"/>
+					<Up x="0.0" y="0.0" z="1.0"/>
+				</BindingSite>				
+				<BindingSite name="bsb" type="bstb">
+					<Bpos x="-0.05" y="-0.028867513459481287" z="0.08164965809277261"/>
+					<Orientation x="0.2298504216904915" y="0.3981126085090629" z="0.7690945006604257" w="0.44403691698855774"/>
+					<Up x="0.0" y="0.0" z="-1.0"/>
+				</BindingSite>
+				<BindingSite name="bsc" type="bstc">
+					<Bpos x="0.05" y="-0.028867513459481287" z="0.08164965809277261"/>
+					<Orientation x="0.2298504216904915" y="-0.3981126085090629" z="-0.7690945006604257" w="0.44403691698855774"/>
+					<Up x="0.0" y="0.0" z="-1.0"/>
+				</BindingSite>
+			</Conformation>
+		</Domain>
+	</SubunitType>	
+</System>

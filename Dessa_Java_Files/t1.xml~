@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System xmlns:tns="http://www.example.org/DessaXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" reloaded="no" type="test" xmlversion="1.4" xsi:schemaLocation="http://www.example.org/DessaXML DessaXML.xsd">
+   <Solution pH="7" temp="50" volume="200"/>
+   <Assemblies>
+      <Assembly amount="60" name="assem">
+         <Subunit name="0" type="only0">
+            <Pos x="0" y="0" z="0"/>
+            <Domain curconf="bs0" id="0"/>
+         </Subunit>
+      </Assembly> 
+   </Assemblies>
+   <BindingSiteTypes>
+      <BindingSiteType name="bst0a">
+         <Tolerance bending="0.2" rotation="0.1" translation="0.1"/>
+         <Partner angle="0" bindTime="1.0" breakTime="1.0" fastBindTime="1e-10" name="bst0b"/>
+         <Pos x="-0.15694013108331234" y="0.12425076432136888" z="-0.24850152864273775"/>
+      </BindingSiteType>
+      <BindingSiteType name="bst0b">
+         <Tolerance bending="0.2" rotation="0.1" translation="0.1"/>
+         <Partner angle="0" bindTime="1.0" breakTime="1.0" fastBindTime="1e-10" name="bst0a"/>
+         <Pos x="-0.2157378651666527" y="-0.1051462224238267" z="0.2102924448476535"/>
+      </BindingSiteType>
+      <BindingSiteType name="bst0c">
+         <Tolerance bending="0.2" rotation="0.1" translation="0.1"/>
+         <Partner angle="0" bindTime="1.0" breakTime="1.0" fastBindTime="1e-10" name="bst0c"/>
+         <Pos x="0.2902734644166453" y="-0.28099349826602826" z="0.09175879469807821"/>
+      </BindingSiteType>      
+   </BindingSiteTypes>
+   <ConformationalSwitch>
+      <ConformationTime name="bs0">
+         <List name="bs0" time="100"/>
+         <List name="bs0" time="100"/>
+      </ConformationTime>
+   </ConformationalSwitch>
+   <SubunitTypes>
+      <SubunitType name="only0">
+         <Up x="0.26967233145831576" y="0.7114324448113515" z="0.39027666336807754"/>
+         <Domain currentconf="bs0" name="0">
+            <Pos x="0" y="0" z="0"/>
+            <Conformation energy="6.6" name="bs0">
+               <BindingSite type="bst0a"/>
+               <BindingSite type="bst0b"/>
+               <BindingSite type="bst0c"/>
+            </Conformation>
+         </Domain>
+      </SubunitType>      
+   </SubunitTypes>
+</System>

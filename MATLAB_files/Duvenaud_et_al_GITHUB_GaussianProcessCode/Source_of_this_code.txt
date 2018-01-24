@@ -1,0 +1,2 @@
+https://github.com/duvenaud/additive-gps (for updated minimize.m, etc.)
+http://www.gaussianprocess.org/gpml/code/matlab/doc/ (for certain covariance functions)

@@ -1,0 +1,157 @@
+<System type="virus">
+	<Solution Temp="50" pH="7" Volume="200"/>
+	<Assembly name="assem" k=" " amount="100" type="monomer">
+		<Subunit name="0" domain="0" type="only0">
+			<Position x="0.0" y="0.0" z="0.0"/>
+			<Rotation x="0.0" y="0.0" z="0.0" w="1.0"/>
+			<Velocity x="0.0" y="0.0" z="0.0"/>
+			<Rotational_Velocity x="0.0" y="0.0" z="0.0" w="1.0"/>
+		</Subunit>
+	</Assembly>
+	<Assembly name="assem" k=" " amount="100" type="monomer">
+		<Subunit name="1" domain="0" type="only1">
+			<Position x="0.0" y="0.0" z="0.0"/>
+			<Rotation x="0.0" y="0.0" z="0.0" w="1.0"/>
+			<Velocity x="0.0" y="0.0" z="0.0"/>
+			<Rotational_Velocity x="0.0" y="0.0" z="0.0" w="1.0"/>
+		</Subunit>
+	</Assembly>
+	<Assembly name="assem" k=" " amount="100" type="monomer">
+		<Subunit name="2" domain="0" type="only2">
+			<Position x="0.0" y="0.0" z="0.0"/>
+			<Rotation x="0.0" y="0.0" z="0.0" w="1.0"/>
+			<Velocity x="0.0" y="0.0" z="0.0"/>
+			<Rotational_Velocity x="0.0" y="0.0" z="0.0" w="1.0"/>
+		</Subunit>
+	</Assembly>
+	<BindingInteract>
+		<BindBreak name="bst0a">
+			<Time name="bst0b" bindTime="1.0" breakTime="1.0" fastbindTime="1.0E-10"/>
+		</BindBreak>
+		<BindBreak name="bst0b">
+			<Time name="bst0a" bindTime="1.0" breakTime="1.0" fastbindTime="1.0E-10"/>
+		</BindBreak>
+		<BindBreak name="bst0c">
+			<Time name="bst1a" bindTime="1.0" breakTime="1.0" fastbindTime="1.0E-10"/>
+		</BindBreak>
+		<BindBreak name="bst1a">
+			<Time name="bst0c" bindTime="1.0" breakTime="1.0" fastbindTime="1.0E-10"/>
+		</BindBreak>
+		<BindBreak name="bst1b">
+			<Time name="bst2a" bindTime="1.0" breakTime="1.0" fastbindTime="1.0E-10"/>
+		</BindBreak>
+		<BindBreak name="bst1c">
+			<Time name="bst2b" bindTime="1.0" breakTime="1.0" fastbindTime="1.0E-10"/>
+		</BindBreak>
+		<BindBreak name="bst2a">
+			<Time name="bst1b" bindTime="1.0" breakTime="1.0" fastbindTime="1.0E-10"/>
+		</BindBreak>
+		<BindBreak name="bst2b">
+			<Time name="bst1c" bindTime="1.0" breakTime="1.0" fastbindTime="1.0E-10"/>
+		</BindBreak>
+		<BindBreak name="bst2c">
+			<Time name="bst2c" bindTime="1.0" breakTime="1.0" fastbindTime="1.0E-10"/>
+		</BindBreak>
+		<ConformationTime name="bs">
+			<List name="none" time="11.0"/>
+		</ConformationTime>
+		<ConformationTime name="none">
+			<List name="bs" time="11.0"/>
+		</ConformationTime>
+	</BindingInteract>
+	<BindingSiteTypes>
+		<BindingSiteType name="bst0a">
+			<tolerance transition="0.2" torsion="0.1" bending="0.1"/>
+			<partner name="bst0b" angle="1.4901161193847656E-8"/>
+		</BindingSiteType>
+		<BindingSiteType name="bst0b">
+			<tolerance transition="0.2" torsion="0.1" bending="0.1"/>
+			<partner name="bst0a" angle="0.0"/>
+		</BindingSiteType>
+		<BindingSiteType name="bst0c">
+			<tolerance transition="0.2" torsion="0.1" bending="0.1"/>
+			<partner name="bst1a" angle="0.0"/>
+		</BindingSiteType>
+		<BindingSiteType name="bst1a">
+			<tolerance transition="0.2" torsion="0.1" bending="0.1"/>
+			<partner name="bst0c" angle="0.0"/>
+		</BindingSiteType>
+		<BindingSiteType name="bst1b">
+			<tolerance transition="0.2" torsion="0.1" bending="0.1"/>
+			<partner name="bst2a" angle="0.0"/>
+		</BindingSiteType>
+		<BindingSiteType name="bst1c">
+			<tolerance transition="0.2" torsion="0.1" bending="0.1"/>
+			<partner name="bst2b" angle="0.0"/>
+		</BindingSiteType>
+		<BindingSiteType name="bst2a">
+			<tolerance transition="0.2" torsion="0.1" bending="0.1"/>
+			<partner name="bst1b" angle="0.0"/>
+		</BindingSiteType>
+		<BindingSiteType name="bst2b">
+			<tolerance transition="0.2" torsion="0.1" bending="0.1"/>
+			<partner name="bst1c" angle="0.0"/>
+		</BindingSiteType>
+		<BindingSiteType name="bst2c">
+			<tolerance transition="0.2" torsion="0.1" bending="0.1"/>
+			<partner name="bst2c" angle="0.0"/>
+		</BindingSiteType>
+	</BindingSiteTypes>
+	<SubunitType name="only0" id="0"> 
+	<Up x="0.26967233145831576" y="0.7114324448113515" z="0.39027666336807754"/> 
+		<Domain position="" id="0" currentConf="bs">
+			<Conformation name="bs" Evalue="6.6">
+				<BindingSite name="bst0a" type="bst0a">
+					<Bpos x="-0.15694013108331245" y="0.12425076432136899" z="-0.24850152864273797"/>
+					<Orientation x="-0.24850152864273797 " y="0.0 " z="0.15694013108331245 " w="1.1708323544060852"/>
+				</BindingSite>
+				<BindingSite name="bst0b" type="bst0b">
+					<Bpos x="-0.2157378651666529" y="-0.10514622242382678" z="0.21029244484765366"/>
+					<Orientation x="0.21029244484765366 " y="-0.0 " z="0.2157378651666529 " w="1.9065852106728798"/>
+				</BindingSite>
+				<BindingSite name="bst0c" type="bst0c">
+					<Bpos x="0.015514403851432369" y="-0.02423249445976226" z="-0.15027683400505307"/>
+					<Orientation x="-0.15027683400505307 " y="0.0 " z="-0.015514403851432369 " w="1.7298414208754929"/>
+				</BindingSite>
+			</Conformation>
+		</Domain>
+	</SubunitType>
+	<SubunitType name="only1" id="0"> 
+	<Up x="0.4565068032508589" y="0.3336536266535195" z="0.5398629083950625"/> 
+		<Domain position="" id="0" currentConf="bs">
+			<Conformation name="bs" Evalue="6.6">
+				<BindingSite name="bst1a" type="bst1a">
+					<Bpos x="0.10343899262410228" y="0.09678531989180367" z="-0.05782745032890668"/>
+					<Orientation x="-0.05782745032890668 " y="0.0 " z="-0.10343899262410228 " w="0.8859470723000049"/>
+				</BindingSite>
+				<BindingSite name="bst1b" type="bst1b">
+					<Bpos x="-0.09341723589627171" y="-0.12857779454801893" z="0.12141239964133721"/>
+					<Orientation x="0.12141239964133721 " y="-0.0 " z="0.09341723589627171 " w="2.2690603550085404"/>
+				</BindingSite>
+				<BindingSite name="bst1c" type="bst1c">
+					<Bpos x="-0.09341723589627156" y="0.16609628936503482" z="-0.06070619982066872"/>
+					<Orientation x="-0.06070619982066872 " y="0.0 " z="0.09341723589627156 " w="0.5908249132992572"/>
+				</BindingSite>
+			</Conformation>
+		</Domain>
+	</SubunitType>
+	<SubunitType name="only2" id="0"> 
+	<Up x="0.08283785966577259" y="0.40869061628755154" z="0.6612753080363997"/> 
+		<Domain position="" id="0" currentConf="bs">
+			<Conformation name="bs" Evalue="6.6">
+				<BindingSite name="bst2a" type="bst2a">
+					<Bpos x="0.09341723589627156" y="-0.16609628936503498" z="0.06070619982066864"/>
+					<Orientation x="0.06070619982066864 " y="0.0 " z="-0.09341723589627156 " w="2.550767740290537"/>
+				</BindingSite>
+				<BindingSite name="bst2b" type="bst2b">
+					<Bpos x="0.09341723589627164" y="0.1285777945480188" z="-0.12141239964133725"/>
+					<Orientation x="-0.12141239964133725 " y="0.0 " z="-0.09341723589627164 " w="0.8725322985812533"/>
+				</BindingSite>
+				<BindingSite name="bst2c" type="bst2c">
+					<Bpos x="-0.1656757193315452" y="-1.6653345369377346E-16" z="1.1102230246251564E-16"/>
+					<Orientation x="1.1102230246251564E-16 " y="-0.0 " z="0.1656757193315452 " w="1.5707963267948977"/>
+				</BindingSite>
+			</Conformation>
+		</Domain>
+	</SubunitType>
+</System>
